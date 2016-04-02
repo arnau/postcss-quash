@@ -1,0 +1,9 @@
+@keyframes foo {
+  0% {
+    color: red;
+    background-color: blue;
+  }
+  100% {
+    color: black;
+  }
+}

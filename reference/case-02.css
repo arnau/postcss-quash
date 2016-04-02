@@ -1,0 +1,20 @@
+@keyframes foo {
+  0% {
+    color: blue;
+    background-color: blue;
+  }
+  10% {
+    color: red;
+    color: blue;
+  }
+
+  10.5% {
+    color: blue;
+    color: green;
+  }
+
+
+  100% {
+    color: black;
+  }
+}
