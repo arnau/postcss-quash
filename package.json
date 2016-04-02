@@ -1,6 +1,6 @@
 {
   "name": "postcss-quash",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "license": "MIT",
   "author": "Arnau Siches <asiches+github@gmail.com>",
   "main": "./dist/index.js",
