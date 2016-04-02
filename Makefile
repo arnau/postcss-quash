@@ -22,11 +22,21 @@ shell:
 	@$(call job, bash)
 .PHONY: shell
 
+dist:
+	@rm -rf dist
+	@$(call job, babel src/* --out-file dist/index.js --compact --minified)
+.PHONY: dist
+
+publish: dist
+	@$(call job, npm login;npm publish)
+.PHONY: publish
+
 
 define job
-  $(DOCKER_JOB) --volume $(PWD)/lib:/home/quash/lib \
-                --volume $(PWD)/reference:/home/quash/reference \
+  $(DOCKER_JOB) --volume $(PWD)/reference:/home/quash/reference \
                 --volume $(PWD)/test:/home/quash/test \
+                --volume $(PWD)/dist:/home/quash/dist \
+                --volume $(PWD)/package.json:/home/quash/package.json \
                 --workdir /home/quash \
                 $(image_name) \
                 $1
