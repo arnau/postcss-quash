@@ -6,4 +6,4 @@ Check the [references](./reference).
 
 ## License
 
-Brunel is released under the MIT license. See [LICENSE](./LICENSE) for details.
+PostCSS-Quash is released under the MIT license. See [LICENSE](./LICENSE) for details.
