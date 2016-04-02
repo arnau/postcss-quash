@@ -1,6 +1,6 @@
 # Changelog
 
-## Next
+## v0.2.0
 
 * Squash decls with the same property in the same keyframe.
 
