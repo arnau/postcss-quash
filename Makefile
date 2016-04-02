@@ -1,4 +1,4 @@
-VERSION ?= dev
+VERSION ?= ps
 
 project_name := quash
 image_name = $(project_name):$(VERSION)
@@ -44,6 +44,7 @@ define job
                 --volume $(PWD)/test:/home/quash/test \
                 --volume $(PWD)/dist:/home/quash/dist \
                 --volume $(PWD)/package.json:/home/quash/package.json \
+                --volume $(PWD)/bower.json:/home/quash/bower.json \
                 --workdir /home/quash \
                 $(image_name) \
                 $1
