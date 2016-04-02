@@ -1,6 +1,6 @@
 import chai, {expect} from "chai";
 
-import {asNumber} from "utils";
+import {asNumber} from "../src/utils";
 
 
 describe("utils", function () {

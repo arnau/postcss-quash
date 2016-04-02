@@ -3,7 +3,7 @@ import postcss from "postcss";
 import chai, {expect} from "chai";
 import chaiAsPromised from "chai-as-promised";
 
-import quash from "postcss-quash";
+import quash from "../src/postcss-quash";
 
 chai.use(chaiAsPromised);
 

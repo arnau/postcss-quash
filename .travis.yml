@@ -1,8 +1,7 @@
 sudo: false
 language: node_js
-env:
-  - NODE_PATH=$HOME/src
 
 node_js:
+  - "0.12"
   - "4"
   - "5"

@@ -1,5 +1,5 @@
 import postcss from "postcss";
-import {orderByPercentage, isUndefined} from "utils";
+import {orderByPercentage, isUndefined} from "./utils";
 
 export default postcss.plugin("postcss-quash", () => {
   return (root, result) => {

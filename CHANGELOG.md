@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.2
+
+* Change import strategy to simplify Travis
+
 ## v0.1.1
 
 * chore: Add readme.
