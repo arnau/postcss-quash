@@ -9,3 +9,7 @@ export function orderByPercentage(a, b) {
 export function asNumber(x) {
   return parseFloat(x);
 }
+
+export function bySelector(contrast) {
+  return {selector} => contrast === selector;
+}

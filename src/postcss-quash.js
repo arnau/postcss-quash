@@ -1,5 +1,8 @@
 import postcss from "postcss";
-import {orderByPercentage, isUndefined} from "./utils";
+import { orderByPercentage
+       , isUndefined
+       , bySelector
+       } from "./utils";
 
 export default postcss.plugin("postcss-quash", () => {
   return (root, result) => {
@@ -11,7 +14,7 @@ export default postcss.plugin("postcss-quash", () => {
 });
 
 function quash(acc, node) {
-  let rule = acc.find(x => node.selector === x.selector);
+  let rule = acc.find(bySelector(node.selector));
 
   if (isUndefined(rule)) {
     acc.push(node);
