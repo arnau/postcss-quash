@@ -1,8 +1,8 @@
 .gitignore
-
 Dockerfile
-
+Makefile
+src/
 node_modules/
 npm-debug.log
-
 .travis.yml
+.editconfig
