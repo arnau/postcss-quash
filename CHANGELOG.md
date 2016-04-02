@@ -2,7 +2,7 @@
 
 ## Next
 
-
+* Squash decls with the same property in the same keyframe.
 
 ## v0.1.3
 

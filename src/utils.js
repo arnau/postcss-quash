@@ -11,5 +11,9 @@ export function asNumber(x) {
 }
 
 export function bySelector(contrast) {
-  return {selector} => contrast === selector;
+  return ({selector}) => contrast === selector;
+}
+
+export function byProp(contrast) {
+  return ({prop}) => contrast === prop;
 }

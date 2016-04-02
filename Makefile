@@ -34,6 +34,7 @@ publish: dist
 
 define job
   $(DOCKER_JOB) --volume $(PWD)/reference:/home/quash/reference \
+                --volume $(PWD)/src:/home/quash/src \
                 --volume $(PWD)/test:/home/quash/test \
                 --volume $(PWD)/dist:/home/quash/dist \
                 --volume $(PWD)/package.json:/home/quash/package.json \
