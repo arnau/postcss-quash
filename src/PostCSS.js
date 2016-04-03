@@ -11,13 +11,13 @@ exports.calculateInterest2 = function (amount, months) {
   return amount * Math.exp(0.1, months);
 };
 
-exports.plugin = function (name) {
-  return function (callback) {
-    postcss.plugin(name, callback);
+// exports.plugin = function (name) {
+//   return function (callback) {
+//     postcss.plugin(name, callback);
 
-    return name;
-  };
-};
+//     return name;
+//   };
+// };
 
 
 // () => {
