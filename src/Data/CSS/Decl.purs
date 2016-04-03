@@ -5,10 +5,10 @@ module Data.CSS.Decl ( Decl
                      , find
                      ) where
 
-import Prelude (map, show, (++), (==), (<<<))
-import Data.List (List, filter, head, (:))
+import Prelude (map, show, (++), (==), (<<<), ($))
+import Data.List (List(..), filter, head, (:))
 import Data.Foldable (foldl, foldr)
-import Data.Maybe (Maybe)
+import Data.Maybe (Maybe(..))
 import Control.Plus (empty)
 
 type Decl =
@@ -36,22 +36,20 @@ showDecl :: Decl -> String
 showDecl decl = decl.prop ++ ": " ++ decl.value ++ ";"
 
 showDecls :: Decls -> String
-showDecls xs = show (foldl (++) "" (map showDecl xs))
+showDecls xs = show
+             $ foldl (++) ""
+             $ map showDecl
+             $ squashDecls xs
 
+squashDecls :: Decls -> Decls
+squashDecls xs = foldr uniqDecl emptyDecls xs
 
-{-- squashDecls :: Decls -> Decls --}
-{-- squashDecls xs --}
-{--   | [] => [] --}
-{--   | xs => xs --}
+uniqDecl :: Decl -> Decls -> Decls
+uniqDecl x xs =
+  case (find x.prop xs) of
+    Nothing -> x:xs
+    _ -> xs
 
-{--   let decl = acc.find(byProp(node.prop)); --}
-
-{--   if (isUndefined(decl)) { --}
-{--     acc.unshift(node); --}
-{--   } --}
-
-{--   return acc; --}
-{-- } --}
 
 
 {-- asNumber :: String -> Number --}
