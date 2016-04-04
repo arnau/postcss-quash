@@ -1,10 +1,10 @@
 {
   "name": "postcss-quash",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "PostCSS plugin to squash and sort keyframes.",
   "license": "MIT",
   "author": "Arnau Siches <asiches+github@gmail.com>",
-  "main": "./dist/index.js",
+  "main": "./dist/postcss-quash.js",
   "keywords": [
     "postcss",
     "postcss-plugin",

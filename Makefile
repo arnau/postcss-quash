@@ -22,9 +22,15 @@ shell:
 	@$(call job, bash)
 .PHONY: shell
 
+check:
+	@rm -rf dist
+	@$(call job, npm check)
+.PHONY: check
+
+
 dist:
 	@rm -rf dist
-	@$(call job, babel src/* --out-file dist/index.js --compact --minified)
+	@$(call job, babel src --out-dir dist)
 .PHONY: dist
 
 publish: dist
