@@ -14,7 +14,7 @@ build:
 
 TEST_FILES ?= $(wildcard test/*_test.js)
 TEST_CMD ?= mocha --compilers js:babel-register $(TEST_FILES)
-test:
+test: dist
 	@$(call job, $(TEST_CMD))
 .PHONY: test
 
@@ -24,7 +24,7 @@ shell:
 
 check:
 	@rm -rf dist
-	@$(call job, npm check)
+	@$(call job, npm outdated)
 .PHONY: check
 
 
