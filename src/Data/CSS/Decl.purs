@@ -10,6 +10,7 @@ import Data.List (List(..), filter, head, (:))
 import Data.Foldable (foldl, foldr)
 import Data.Maybe (Maybe(..))
 import Control.Plus (empty)
+import Global (readFloat)
 
 type Decl =
   { prop :: String
