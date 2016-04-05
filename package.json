@@ -1,6 +1,6 @@
 {
   "name": "postcss-quash",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "PostCSS plugin to squash and sort keyframes.",
   "license": "MIT",
   "author": "Arnau Siches <asiches+github@gmail.com>",

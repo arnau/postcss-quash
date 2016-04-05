@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.2.2
+
+* Fix npm exports
+
 ## v0.2.1
 
 * Fix distribution dependencies.
