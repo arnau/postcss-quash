@@ -5,6 +5,7 @@ import Data.List (toList)
 import Control.Monad.Eff (Eff)
 import Control.Monad.Eff.Console (CONSOLE, log)
 
+import PostCSS.Quash (asNumber)
 import Data.CSS.Rule (Rule, showRule)
 import Data.CSS.Decl (Decl, showDecl)
 

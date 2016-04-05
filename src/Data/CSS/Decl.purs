@@ -10,7 +10,6 @@ import Data.List (List(..), filter, head, (:))
 import Data.Foldable (foldl, foldr)
 import Data.Maybe (Maybe(..))
 import Control.Plus (empty)
-import Global (readFloat)
 
 type Decl =
   { prop :: String
@@ -52,16 +51,6 @@ uniqDecl x xs =
     _ -> xs
 
 
-
-{-- asNumber :: String -> Number --}
-{-- asNumber x = do --}
-{--   x :: Number --}
-
-{-- export function bySelector(contrast) { --}
-{--   return ({selector}) => contrast === selector; --}
-{-- } --}
-
-
 {-- quash :: forall a. List a --}
 {-- quash nodes = do --}
 {--   rule.nodes.reduce(squashRules, []) --}
@@ -69,18 +58,3 @@ uniqDecl x xs =
 {--     }) --}
 {--   } --}
 {-- }); --}
-
-{-- function squashRules(acc, node) { --}
-{--   let rule = acc.find(bySelector(node.selector)); --}
-
-{--   if (isUndefined(rule)) { --}
-{--     acc.push(node); --}
-{--   } else { --}
-{--     rule.nodes.push(...node.nodes); --}
-{--     rule.nodes = rule.nodes.reduceRight(squashDecls, []); --}
-{--   } --}
-
-{--   return acc; --}
-{-- } --}
-
-
