@@ -5,7 +5,7 @@ import { orderByPercentage
        , byProp
        } from "./utils";
 
-export default postcss.plugin("postcss-quash", () => {
+module.exports = postcss.plugin("postcss-quash", () => {
   return (root, result) => {
     root.walkAtRules("keyframes", rule => {
       rule.nodes = rule.nodes.reduce(squashRules, [])
