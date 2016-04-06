@@ -21,17 +21,7 @@ function squashRules(acc, node) {
     acc.push(node);
   } else {
     rule.nodes.push(...node.nodes);
-    rule.nodes = rule.nodes.reduceRight(squashDecls, []);
-  }
-
-  return acc;
-}
-
-function squashDecls(acc, node) {
-  let decl = acc.find(byProp(node.prop));
-
-  if (isUndefined(decl)) {
-    acc.unshift(node);
+    rule.nodes = rule.nodes;
   }
 
   return acc;
