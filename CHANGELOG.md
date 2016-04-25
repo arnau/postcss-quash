@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.3.0
+
+* Rollback squashing declarations.
+
 ## v0.2.2
 
 * Fix npm exports
